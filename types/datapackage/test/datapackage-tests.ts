@@ -1,4 +1,4 @@
-import { Package, Profile, Resource, Schema } from 'datapackage';
+import { Package, Profile, Resource } from 'datapackage';
 const packageDescriptor = {
     resources: [
         { name: 'name1', data: ['data'], schema: '#/schemas/main' },
@@ -14,13 +14,3 @@ const resurceDescriptor = {
     data: ['data'],
 };
 Resource.load(resurceDescriptor).then((r: Resource) => {});
-const SCHEMA = {
-    fields: [
-        { name: 'id', type: 'string', constraints: { required: true } },
-        { name: 'height', type: 'number' },
-        { name: 'age', type: 'integer' },
-        { name: 'name', type: 'string', constraints: { required: true } },
-        { name: 'occupation', type: 'string' },
-    ],
-};
-Schema.load(SCHEMA).then((s: Schema) => {});
